@@ -329,7 +329,7 @@
           "yieldDuration" : "1 sec"
         }, {
           "autoTerminatedRelationships" : [ ],
-          "bulletinLevel" : "WARN",
+          "bulletinLevel" : "INFO",
           "bundle" : {
             "artifact" : "nifi-standard-nar",
             "group" : "org.apache.nifi",

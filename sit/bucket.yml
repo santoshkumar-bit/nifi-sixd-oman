@@ -1,9 +1,0 @@
-flows:
-  6052b289-7259-4f0c-ba28-29af891e15e7: {ver: 1, file: IX1.2.4_OCS_CDR_to_Mobileum_Compression.snapshot,
-    comments: '', author: anonymous, created: 1768585524735, flowName: IX1.2.4 OCS
-      CDR to Mobileum Compression, flowDesc: ''}
-  d0376266-afa9-459a-a161-a21cecddb763: {ver: 1, file: IX.2.2.15_38_Ericsson_SMSC_CDR_to_Netcracker_Data_Lake_Compression.snapshot,
-    comments: '', author: anonymous, created: 1768585496852, flowName: IX.2.2.15/38
-      Ericsson SMSC CDR to Netcracker Data Lake Compression, flowDesc: ''}
-layoutVer: 1
-bucketId: 20d14452-b655-4775-a34c-b32745578429

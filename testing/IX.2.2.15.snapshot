@@ -1,0 +1,796 @@
+{
+  "header" : {
+    "dataModelVersion" : "3"
+  },
+  "content" : {
+    "flowSnapshot" : {
+      "externalControllerServices" : { },
+      "flowContents" : {
+        "comments" : "",
+        "componentType" : "PROCESS_GROUP",
+        "connections" : [ {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "29fb86ff-6234-381d-81af-80a53a75a006",
+            "id" : "1925e903-8dbf-30f0-af02-e042de063f03",
+            "name" : "Funnel",
+            "type" : "FUNNEL"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "29fb86ff-6234-381d-81af-80a53a75a006",
+          "identifier" : "f40095b7-3f11-3053-90e0-6d4a3e511074",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "29fb86ff-6234-381d-81af-80a53a75a006",
+            "id" : "307d06d7-7c66-3815-9b6c-958e438773eb",
+            "name" : "MonitoringDataAfterRetryFailure",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ {
+            "x" : 701.6424969135594,
+            "y" : 691.0463598971105
+          } ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "29fb86ff-6234-381d-81af-80a53a75a006",
+            "id" : "6c347df1-b3e0-3332-b3c8-cf2a483645be",
+            "name" : "MonitoringDataComplete",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "29fb86ff-6234-381d-81af-80a53a75a006",
+          "identifier" : "47a0c202-d9aa-3c11-85c0-38cc26a29b0f",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "compression-success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "29fb86ff-6234-381d-81af-80a53a75a006",
+            "id" : "0232e630-d814-3f37-94e1-344556d7f333",
+            "name" : "Check If Compression Succeeded",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ {
+            "x" : -378.3575030864406,
+            "y" : 691.0463598971105
+          } ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "29fb86ff-6234-381d-81af-80a53a75a006",
+            "id" : "0d804c18-196e-32b5-b0ee-fb4305aa31ed",
+            "name" : "Execute gzip Command",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "29fb86ff-6234-381d-81af-80a53a75a006",
+          "identifier" : "2b304b41-73be-363b-a928-608bcafcb7f9",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "29fb86ff-6234-381d-81af-80a53a75a006",
+            "id" : "4c32c05c-c27b-347b-a386-69f5c4690e95",
+            "name" : "MonitoringDataInitial",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ {
+            "x" : -722.3575030864406,
+            "y" : 691.0463598971105
+          } ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "29fb86ff-6234-381d-81af-80a53a75a006",
+            "id" : "4c32c05c-c27b-347b-a386-69f5c4690e95",
+            "name" : "MonitoringDataInitial",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "29fb86ff-6234-381d-81af-80a53a75a006",
+          "identifier" : "d7d4f651-c9e1-3bd3-ac8b-95940d6ec13b",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "29fb86ff-6234-381d-81af-80a53a75a006",
+            "id" : "fffd3f38-5ba9-35e1-907c-d26f7bb74947",
+            "name" : "Daily Compression Job Trigger",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ {
+            "x" : -10.357503086440602,
+            "y" : 691.0463598971105
+          } ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "29fb86ff-6234-381d-81af-80a53a75a006",
+            "id" : "fded9c07-7755-3397-b4f1-3e42138e25e7",
+            "name" : "MonitoringDataAfterSource",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "29fb86ff-6234-381d-81af-80a53a75a006",
+          "identifier" : "55dbb203-ee8c-3c9e-98c7-9176746a78d3",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "original" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "29fb86ff-6234-381d-81af-80a53a75a006",
+            "id" : "0d804c18-196e-32b5-b0ee-fb4305aa31ed",
+            "name" : "Execute gzip Command",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "29fb86ff-6234-381d-81af-80a53a75a006",
+            "id" : "307d06d7-7c66-3815-9b6c-958e438773eb",
+            "name" : "MonitoringDataAfterRetryFailure",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "29fb86ff-6234-381d-81af-80a53a75a006",
+          "identifier" : "8a928a4c-ce3b-38ea-a355-0d6bb54cdc52",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "unmatched" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "29fb86ff-6234-381d-81af-80a53a75a006",
+            "id" : "0232e630-d814-3f37-94e1-344556d7f333",
+            "name" : "Check If Compression Succeeded",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ {
+            "x" : 341.6424969135594,
+            "y" : 691.0463598971105
+          } ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "29fb86ff-6234-381d-81af-80a53a75a006",
+            "id" : "0232e630-d814-3f37-94e1-344556d7f333",
+            "name" : "Check If Compression Succeeded",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "29fb86ff-6234-381d-81af-80a53a75a006",
+          "identifier" : "54a4989c-d02b-3ce5-96c6-f4a625974533",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "29fb86ff-6234-381d-81af-80a53a75a006",
+            "id" : "fded9c07-7755-3397-b4f1-3e42138e25e7",
+            "name" : "MonitoringDataAfterSource",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        } ],
+        "controllerServices" : [ ],
+        "flowFileConcurrency" : "UNBOUNDED",
+        "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+        "funnels" : [ {
+          "componentType" : "FUNNEL",
+          "groupIdentifier" : "29fb86ff-6234-381d-81af-80a53a75a006",
+          "identifier" : "1925e903-8dbf-30f0-af02-e042de063f03",
+          "position" : {
+            "x" : 512.0,
+            "y" : 1120.0
+          }
+        } ],
+        "identifier" : "29fb86ff-6234-381d-81af-80a53a75a006",
+        "inputPorts" : [ ],
+        "labels" : [ ],
+        "name" : "IX.2.2.15/38 Ericsson SMSC CDR to Netcracker Data Lake Compression",
+        "outputPorts" : [ ],
+        "position" : {
+          "x" : 32.0,
+          "y" : -1640.0
+        },
+        "processGroups" : [ ],
+        "processors" : [ {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-update-attribute-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.12.1"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "29fb86ff-6234-381d-81af-80a53a75a006",
+          "identifier" : "307d06d7-7c66-3815-9b6c-958e438773eb",
+          "name" : "MonitoringDataAfterRetryFailure",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 360.0,
+            "y" : 920.0
+          },
+          "properties" : {
+            "EventDate" : "${now():format('yyyy-MM-dd HH:mm:ss')}",
+            "Store State" : "Do not store state",
+            "canonical-value-lookup-cache-size" : "100",
+            "FlowStatus" : "RetryFailure"
+          },
+          "propertyDescriptors" : {
+            "EventDate" : {
+              "displayName" : "EventDate",
+              "identifiesControllerService" : false,
+              "name" : "EventDate",
+              "sensitive" : false
+            },
+            "Delete Attributes Expression" : {
+              "displayName" : "Delete Attributes Expression",
+              "identifiesControllerService" : false,
+              "name" : "Delete Attributes Expression",
+              "sensitive" : false
+            },
+            "Store State" : {
+              "displayName" : "Store State",
+              "identifiesControllerService" : false,
+              "name" : "Store State",
+              "sensitive" : false
+            },
+            "canonical-value-lookup-cache-size" : {
+              "displayName" : "Cache Value Lookup Cache Size",
+              "identifiesControllerService" : false,
+              "name" : "canonical-value-lookup-cache-size",
+              "sensitive" : false
+            },
+            "Stateful Variables Initial Value" : {
+              "displayName" : "Stateful Variables Initial Value",
+              "identifiesControllerService" : false,
+              "name" : "Stateful Variables Initial Value",
+              "sensitive" : false
+            },
+            "FlowStatus" : {
+              "displayName" : "FlowStatus",
+              "identifiesControllerService" : false,
+              "name" : "FlowStatus",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.12.1"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "PRIMARY",
+          "groupIdentifier" : "29fb86ff-6234-381d-81af-80a53a75a006",
+          "identifier" : "fffd3f38-5ba9-35e1-907c-d26f7bb74947",
+          "name" : "Daily Compression Job Trigger",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : -1080.0,
+            "y" : 728.0
+          },
+          "properties" : {
+            "character-set" : "UTF-8",
+            "File Size" : "0B",
+            "Batch Size" : "1",
+            "Unique FlowFiles" : "false",
+            "Data Format" : "Text"
+          },
+          "propertyDescriptors" : {
+            "character-set" : {
+              "displayName" : "Character Set",
+              "identifiesControllerService" : false,
+              "name" : "character-set",
+              "sensitive" : false
+            },
+            "File Size" : {
+              "displayName" : "File Size",
+              "identifiesControllerService" : false,
+              "name" : "File Size",
+              "sensitive" : false
+            },
+            "mime-type" : {
+              "displayName" : "Mime Type",
+              "identifiesControllerService" : false,
+              "name" : "mime-type",
+              "sensitive" : false
+            },
+            "generate-ff-custom-text" : {
+              "displayName" : "Custom Text",
+              "identifiesControllerService" : false,
+              "name" : "generate-ff-custom-text",
+              "sensitive" : false
+            },
+            "Batch Size" : {
+              "displayName" : "Batch Size",
+              "identifiesControllerService" : false,
+              "name" : "Batch Size",
+              "sensitive" : false
+            },
+            "Unique FlowFiles" : {
+              "displayName" : "Unique FlowFiles",
+              "identifiesControllerService" : false,
+              "name" : "Unique FlowFiles",
+              "sensitive" : false
+            },
+            "Data Format" : {
+              "displayName" : "Data Format",
+              "identifiesControllerService" : false,
+              "name" : "Data Format",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 5 1 ? * *",
+          "schedulingStrategy" : "CRON_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-update-attribute-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.12.1"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "29fb86ff-6234-381d-81af-80a53a75a006",
+          "identifier" : "fded9c07-7755-3397-b4f1-3e42138e25e7",
+          "name" : "MonitoringDataAfterSource",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 0.0,
+            "y" : 728.0
+          },
+          "properties" : {
+            "EventDate" : "${now():format('yyyy-MM-dd HH:mm:ss')}",
+            "Store State" : "Do not store state",
+            "canonical-value-lookup-cache-size" : "100",
+            "SourceNumberOfRecords" : "1",
+            "FlowStatus" : "AfterSource"
+          },
+          "propertyDescriptors" : {
+            "EventDate" : {
+              "displayName" : "EventDate",
+              "identifiesControllerService" : false,
+              "name" : "EventDate",
+              "sensitive" : false
+            },
+            "Delete Attributes Expression" : {
+              "displayName" : "Delete Attributes Expression",
+              "identifiesControllerService" : false,
+              "name" : "Delete Attributes Expression",
+              "sensitive" : false
+            },
+            "Store State" : {
+              "displayName" : "Store State",
+              "identifiesControllerService" : false,
+              "name" : "Store State",
+              "sensitive" : false
+            },
+            "canonical-value-lookup-cache-size" : {
+              "displayName" : "Cache Value Lookup Cache Size",
+              "identifiesControllerService" : false,
+              "name" : "canonical-value-lookup-cache-size",
+              "sensitive" : false
+            },
+            "SourceNumberOfRecords" : {
+              "displayName" : "SourceNumberOfRecords",
+              "identifiesControllerService" : false,
+              "name" : "SourceNumberOfRecords",
+              "sensitive" : false
+            },
+            "Stateful Variables Initial Value" : {
+              "displayName" : "Stateful Variables Initial Value",
+              "identifiesControllerService" : false,
+              "name" : "Stateful Variables Initial Value",
+              "sensitive" : false
+            },
+            "FlowStatus" : {
+              "displayName" : "FlowStatus",
+              "identifiesControllerService" : false,
+              "name" : "FlowStatus",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.12.1"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "29fb86ff-6234-381d-81af-80a53a75a006",
+          "identifier" : "0232e630-d814-3f37-94e1-344556d7f333",
+          "name" : "Check If Compression Succeeded",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 360.0,
+            "y" : 728.0
+          },
+          "properties" : {
+            "Routing Strategy" : "Route to Property name",
+            "compression-success" : "${compression-status:isEmpty()}"
+          },
+          "propertyDescriptors" : {
+            "Routing Strategy" : {
+              "displayName" : "Routing Strategy",
+              "identifiesControllerService" : false,
+              "name" : "Routing Strategy",
+              "sensitive" : false
+            },
+            "compression-success" : {
+              "displayName" : "compression-success",
+              "identifiesControllerService" : false,
+              "name" : "compression-success",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.12.1"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "29fb86ff-6234-381d-81af-80a53a75a006",
+          "identifier" : "0d804c18-196e-32b5-b0ee-fb4305aa31ed",
+          "name" : "Execute gzip Command",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : -360.0,
+            "y" : 728.0
+          },
+          "properties" : {
+            "argumentsStrategy" : "Command Arguments Property",
+            "Max Attribute Length" : "256",
+            "Command Path" : "bash",
+            "Working Directory" : "#{Linux Archive Location}iconx/smsc/datalake",
+            "Output Destination Attribute" : "compression-status",
+            "Argument Delimiter" : ",",
+            "Ignore STDIN" : "true",
+            "Command Arguments" : "-c,#{Archive Compression Command}"
+          },
+          "propertyDescriptors" : {
+            "argumentsStrategy" : {
+              "displayName" : "Command Arguments Strategy",
+              "identifiesControllerService" : false,
+              "name" : "argumentsStrategy",
+              "sensitive" : false
+            },
+            "Max Attribute Length" : {
+              "displayName" : "Max Attribute Length",
+              "identifiesControllerService" : false,
+              "name" : "Max Attribute Length",
+              "sensitive" : false
+            },
+            "Command Path" : {
+              "displayName" : "Command Path",
+              "identifiesControllerService" : false,
+              "name" : "Command Path",
+              "sensitive" : false
+            },
+            "Working Directory" : {
+              "displayName" : "Working Directory",
+              "identifiesControllerService" : false,
+              "name" : "Working Directory",
+              "sensitive" : false
+            },
+            "Output Destination Attribute" : {
+              "displayName" : "Output Destination Attribute",
+              "identifiesControllerService" : false,
+              "name" : "Output Destination Attribute",
+              "sensitive" : false
+            },
+            "Argument Delimiter" : {
+              "displayName" : "Argument Delimiter",
+              "identifiesControllerService" : false,
+              "name" : "Argument Delimiter",
+              "sensitive" : false
+            },
+            "Ignore STDIN" : {
+              "displayName" : "Ignore STDIN",
+              "identifiesControllerService" : false,
+              "name" : "Ignore STDIN",
+              "sensitive" : false
+            },
+            "Command Arguments" : {
+              "displayName" : "Command Arguments",
+              "identifiesControllerService" : false,
+              "name" : "Command Arguments",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.ExecuteStreamCommand",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "success" ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-update-attribute-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.12.1"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "29fb86ff-6234-381d-81af-80a53a75a006",
+          "identifier" : "6c347df1-b3e0-3332-b3c8-cf2a483645be",
+          "name" : "MonitoringDataComplete",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 720.0,
+            "y" : 728.0
+          },
+          "properties" : {
+            "EventDate" : "${now():format('yyyy-MM-dd HH:mm:ss')}",
+            "DestinationNumberOfRecords" : "1",
+            "Store State" : "Do not store state",
+            "canonical-value-lookup-cache-size" : "100",
+            "FlowStatus" : "Complete"
+          },
+          "propertyDescriptors" : {
+            "EventDate" : {
+              "displayName" : "EventDate",
+              "identifiesControllerService" : false,
+              "name" : "EventDate",
+              "sensitive" : false
+            },
+            "Delete Attributes Expression" : {
+              "displayName" : "Delete Attributes Expression",
+              "identifiesControllerService" : false,
+              "name" : "Delete Attributes Expression",
+              "sensitive" : false
+            },
+            "DestinationNumberOfRecords" : {
+              "displayName" : "DestinationNumberOfRecords",
+              "identifiesControllerService" : false,
+              "name" : "DestinationNumberOfRecords",
+              "sensitive" : false
+            },
+            "Store State" : {
+              "displayName" : "Store State",
+              "identifiesControllerService" : false,
+              "name" : "Store State",
+              "sensitive" : false
+            },
+            "canonical-value-lookup-cache-size" : {
+              "displayName" : "Cache Value Lookup Cache Size",
+              "identifiesControllerService" : false,
+              "name" : "canonical-value-lookup-cache-size",
+              "sensitive" : false
+            },
+            "Stateful Variables Initial Value" : {
+              "displayName" : "Stateful Variables Initial Value",
+              "identifiesControllerService" : false,
+              "name" : "Stateful Variables Initial Value",
+              "sensitive" : false
+            },
+            "FlowStatus" : {
+              "displayName" : "FlowStatus",
+              "identifiesControllerService" : false,
+              "name" : "FlowStatus",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-update-attribute-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.12.1"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "29fb86ff-6234-381d-81af-80a53a75a006",
+          "identifier" : "4c32c05c-c27b-347b-a386-69f5c4690e95",
+          "name" : "MonitoringDataInitial",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : -720.0,
+            "y" : 728.0
+          },
+          "properties" : {
+            "EventDate" : "${now():format('yyyy-MM-dd HH:mm:ss')}",
+            "Store State" : "Do not store state",
+            "canonical-value-lookup-cache-size" : "100",
+            "FlowFileID" : "${uuid}",
+            "FlowDescription" : "IX.2.2.15/38 Ericsson SMSC CDR to Netcracker Data Lake Compression",
+            "DataFlow" : "IX.2.2.15/38 Ericsson SMSC CDR to Netcracker Data Lake Compression",
+            "FlowStatus" : "Initial"
+          },
+          "propertyDescriptors" : {
+            "EventDate" : {
+              "displayName" : "EventDate",
+              "identifiesControllerService" : false,
+              "name" : "EventDate",
+              "sensitive" : false
+            },
+            "Delete Attributes Expression" : {
+              "displayName" : "Delete Attributes Expression",
+              "identifiesControllerService" : false,
+              "name" : "Delete Attributes Expression",
+              "sensitive" : false
+            },
+            "Store State" : {
+              "displayName" : "Store State",
+              "identifiesControllerService" : false,
+              "name" : "Store State",
+              "sensitive" : false
+            },
+            "canonical-value-lookup-cache-size" : {
+              "displayName" : "Cache Value Lookup Cache Size",
+              "identifiesControllerService" : false,
+              "name" : "canonical-value-lookup-cache-size",
+              "sensitive" : false
+            },
+            "Stateful Variables Initial Value" : {
+              "displayName" : "Stateful Variables Initial Value",
+              "identifiesControllerService" : false,
+              "name" : "Stateful Variables Initial Value",
+              "sensitive" : false
+            },
+            "FlowFileID" : {
+              "displayName" : "FlowFileID",
+              "identifiesControllerService" : false,
+              "name" : "FlowFileID",
+              "sensitive" : false
+            },
+            "FlowDescription" : {
+              "displayName" : "FlowDescription",
+              "identifiesControllerService" : false,
+              "name" : "FlowDescription",
+              "sensitive" : false
+            },
+            "DataFlow" : {
+              "displayName" : "DataFlow",
+              "identifiesControllerService" : false,
+              "name" : "DataFlow",
+              "sensitive" : false
+            },
+            "FlowStatus" : {
+              "displayName" : "FlowStatus",
+              "identifiesControllerService" : false,
+              "name" : "FlowStatus",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "yieldDuration" : "1 sec"
+        } ],
+        "remoteProcessGroups" : [ ],
+        "variables" : { }
+      },
+      "flowEncodingVersion" : "1.0",
+      "parameterContexts" : { }
+    }
+  }
+}
